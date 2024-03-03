@@ -49,7 +49,7 @@ const removeBackgroundInImageFile = async(
   try {
     imageBlob = await removeBackground(selectedFile as ImageSource, {
       model: model,
-      publicPath: location.protocol + '//' + location.host + '/bg-removal-data/',
+      publicPath: location.protocol + '//' + location.host + '/automatic-background-remover/bg-removal-data/',
       progress: (key, current, total) => {
         if (key.startsWith('fetch:')) {
           bgRemovalCallbacks.setShowBgRemovalProgress(true);
