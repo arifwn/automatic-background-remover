@@ -115,7 +115,7 @@ export default function BackgroundRemover(props: {
     }
   }
 
-  const removeLogo = () => {
+  const removeImage = () => {
     setSelectedFile(undefined);
     setSelectedImageUrl(undefined);
     setShowUploader(true);
@@ -154,7 +154,7 @@ export default function BackgroundRemover(props: {
         {({getRootProps, getInputProps}) => (
             <div className={` ${props.className} flex flex-col items-center justify-center p-5 border-2 border-dashed border-2-[#eee] rounded-sm bg-[#fafafa] text-[#bdbdbd] outline-none transition-all cursor-pointer`} {...getRootProps()}>
               <input {...getInputProps()} />
-              <div className="text-center">Click to upload or drag logo here (.png, .jpg or .webp)</div>
+              <div className="text-center">Click to upload or drag an image here (.png, .jpg or .webp)</div>
             </div>
         )}
       </Dropzone>
@@ -230,7 +230,7 @@ export default function BackgroundRemover(props: {
           className="rounded bg-slate-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
         >Change</button>
         <button
-          onClick={removeLogo}
+          onClick={removeImage}
           disabled={isRemovingBG}
           className="rounded bg-slate-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
         >Delete</button>
